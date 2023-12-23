@@ -16,9 +16,6 @@ eight(dividedBy(three()));
 
 */
 
-const numberMap = {"zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,
-                  "seven":7,"eight":8,"nine":9};
-
 function zero(operation) { return operation ? operation(0) : 0 }
 function one(operation) {return operation ? operation(1) : 1}
 function two(operation) {return operation ? operation(2) : 2}
@@ -34,3 +31,10 @@ function plus(number) { return x=>x+number  }
 function minus(number) { return x=>x-number}
 function times(number) { return x=>x*number}
 function dividedBy(number) { return x=>Math.floor(x/number)}
+
+/*
+const [zero,one,two,three,four,five,six,seven,eight,nine] = 
+      Array(10).fill(0).map((_,i)=>fn=>fn?fn(i):i)
+const [plus,minus,times,dividedBy] = ['+','-','*','/']
+.map(s => a => b=> Math.floor(eval(b+s+a)))
+*/
